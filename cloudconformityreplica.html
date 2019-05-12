@@ -1,26 +1,96 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Knowledge base</title>
-	
-	<STYLE type="text/css">
-		ol,ul,li {list-style:none; outline:none
-	</STYLE>
+
+<title>Knowledge base</title>
+
+<LINK REL='stylesheet' HREF='http://fonts.googleapis.com/css?family=Roboto' TYPE='text/css'>
+<LINK REL='stylesheet' HREF='../include/cloudconformity.css' TYPE='text/css'>
+
 </head>
 
 <body>
 
-<table>
+<div style="height:20px">&nbsp;</div><!-- this top spacing is for effect on scroll down with sticky header -->
+
+<div class="header" id="myHeader">
+<table width='100%' cellpadding='0' cellspacing='0'>
 <tr>
-	<td vAlign='top'id='columnLeft'></td>
-	<td vAlign='top'id='columnRight'></td>
+	<td>
+	<a href="/" title="Cloud Conformity Homepage"> <img src="../include/logo-cloud-conformity.png"></a>
+	</td>
+	
+	<td align='right' nowrap>
+
+		<a href='../about-us.html' class='mainmenu' Title='About'>About</a>
+		<a href='../requently-asked-questions' class='mainmenu' Title='FAQ'>FAQ</a>
+		<a href='../conformity-rules/' class='mainmenu' Title='Knowledge Base'>Knowledge Base</a>
+		<a href='../pricing.html' class='mainmenu' Title='Pricing'>Pricing</a>
+		<a href='../product.html' class='mainmenu' Title='Product'>Product</a>
+		<a href='../blog/' class='mainmenu' Title='Blog'>Blog</a>
+		
+		<span style='border-left:1px solid #ccf; padding-top:2px; padding-bottom:2px'>
+			<a href='../sign-in.html' class='signin' Title="Existing user's sign in page">Sign in</a>
+			<a href='../sign-up.html' class='freetrial' title="Sign Up">Free trial</a>
+		</div>
+	</td>
 </tr>
 </table>
-	
+</div>
+
+<!-- ///////////////////// CONTENT SECTION - for scrolling down with header fixed (sticky) //////////////////// -->
+<div class="content">
+
+<div class='decobase'>
+
+	<table width='100%' cellpadding = '0' cellspacing = '0'>
+	<tr>
+		<td width='40%' nowrap>
+		<font class='decoleft'>Knowledge base</font>
+		</td>
+		
+		<td width='10%'>
+		<div style='border-left: 1px solid #C6ADCF; height:120px'>&nbsp;</div>
+		</td>
+		
+		<td width='40%'>
+		<div style='width:480px'>
+			<font class='decoright'>
+			Cloud Conformity is a continuous assurance tool that provides peace of mind for your AWS infrastructure, delivering over 500 automated best practice checks across the five pillars of the AWS Well-Architected Framework.
+			</font>
+		</div>
+		</td>
+	</tr>
+	</table>
+
+	<div style='margin-top:40px'>
+		<a href="/"  class="homenav">Home</a>
+		<img src='../include/next_icon.gif'>
+		<a href="?" class="nav2">Knowledge base</a> <!-- link to this same page -->
+	</div>
+
+</div>
+
+<div class='title1'>Conformity Rules</div>
+
+<div class='title2'>
+Along with continuous assurance of your infrastructure, Cloud Conformity is an educational tool, providing detailed resolution steps to rectify security vulnerabilities, performance and cost inefficiencies, and reliability risks. The combination of real time monitoring and simplified, readily available remediation information enables organisations to embrace DevOps, without the fear of introducing vulnerabilities or reliability risks.</p>
+<p>
+Below are the AWS services and their associated rules included in the continuous assurance check by Cloud Conformity. New rules are being developed every day so if there’s a particular rule or service that is not covered, please get in touch with us and we will add it to the list.
+</div>
+
+<table width='100%'>
+<tr>
+	<td vAlign='top'id='columnLeft' width='50%'></td>
+	<td vAlign='top'id='columnRight' width='50%'></td>
+</tr>
+</table>
+
 <script language='javascript'>
 
 var xmlhttp = new XMLHttpRequest();
-var url = 'https://us-west-2.cloudconformity.com/v1/services';
+var APIEendpoint = 'https://us-west-2.cloudconformity.com/v1/services';
 
 xmlhttp.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
@@ -28,11 +98,11 @@ xmlhttp.onreadystatechange = function() {
 		DisplayList(results);
 	}
 }
-xmlhttp.open('GET', url, true); //third argument is async = true,  to perform the operation asynchronously (default or absent = true)
+xmlhttp.open('GET', APIEendpoint, true); //third argument is async = true,  to perform the operation asynchronously (default or absent = true)
 xmlhttp.send();
 
 function DisplayList(obj) {
-	
+
 	var columnLeft = document.getElementById('columnLeft');
 	var columnRight = document.getElementById('columnRight');
 	
@@ -47,13 +117,13 @@ function DisplayList(obj) {
 		}
 	}
 	
-	ruleIds.sort(); // ruleIds(i).reverse() is sorting descending
+	ruleIds.sort(); 
 	
 	for (i = 0; i < ruleIds.length; i++) {
 		ul = document.createElement('ul');
 		ul.setAttribute('id', ruleIds[i]);
 		li = document.createElement('li');
-		li.innerHTML = '<font size=5><b>' + ruleIds[i] + '</b></font>'; 
+		li.innerHTML = "<li><a href='./" + ruleIds[i] + "/' class='ruleGrplink'>" + ruleIds[i] + "</a><li></li>";
 		ul.appendChild(li);
 		
 		if (i < ruleIds.length/2)
@@ -65,13 +135,69 @@ function DisplayList(obj) {
 	for (i = 0; i < obj.included.length; i++) {
 		ruleGrp = ruleDataIdMap[obj.included[i].id];
 		if (var1 = document.getElementById(ruleGrp)) {
-			var1.innerHTML += "<li><a href='./" + ruleGrp + "/" + obj.included[i].attributes.slug + "'>" + obj.included[i].attributes.title + "</a></li>";
+			var1.innerHTML += "<li><a href='./" + ruleGrp + "/" + obj.included[i].attributes.slug + ".html'>" + obj.included[i].attributes.title + "</a></li>";
 		}
 	}
 }
 </script>
 
 <hr>
+
+<!-- manual adding rules here -->
+<table width='100%'>
+<tr>
+	<td vAlign='top' width='50%'>
+	<ul>
+	<li><a href='./RTM/' class='ruleGrplink'>RTM</a><li></li>
+	<li><a href='./RTM/activity-in-black-listed-regions.html'>AWS Activity Detected In Blacklisted Region(s)</a></li>
+	<li><a href='./RTM/RTM/cc-user-signs-in-from-approved-country-list.html'>Cloud Conformity User Signed In From Non-Approved Country</a></li>
+	</ul>
+	</td>
+	
+	<td vAlign='top' width='50%'>
+	<ul>
+	<li><a href='./Compliance/' class='ruleGrplink'>Compliance</a><li></li>
+	<li><a href='./Compliance/Well-Architected/'>AWS Well-Architected Framework</a></li>
+	<li><a href='./Compliance/CIS/'>CIS AWS Foundations Benchmark</a></li>
+	</ul>
+	</td>
+</tr>
+</table>
+
+</div> <!-- END OF CONTENT SECTION -->
+
+
+<div class='bottom_background'> 
+Whether you are still exploring the benefits of Amazon Web Services, or are running complex critical workloads, Cloud Conformity simplifies the challenging task of maintaining visibility of your infrastructure and ensuring compliance against best practices, along with identifying potential threats in real-time.
+<p>
+<br>
+<a href='../sign-up.html' class='bigtrial' title="Sign Up">Start a free trial</a>
+</div>
+
+<hr class='hr_flat'>
+<div style='text-align:right;color:#999;font-size:14px;font-family:sans-serif'>
+© 2016 - 2019 Cloud Conformity Pty. Ltd.
+<br>
+Website version: v1.3.62
+<br>
+Last update: 12 May 2019
+</div>
+
+<script language='javascript'>
+// add sticky header on scroll page down
+window.onscroll = function() {myScroll()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myScroll() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
 
 </body>
 </html>
