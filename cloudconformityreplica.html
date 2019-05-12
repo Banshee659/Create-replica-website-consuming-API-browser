@@ -17,7 +17,59 @@
 </tr>
 </table>
 	
+<script language='javascript'>
 
+var xmlhttp = new XMLHttpRequest();
+var url = 'https://us-west-2.cloudconformity.com/v1/services';
+
+xmlhttp.onreadystatechange = function() {
+	if (this.readyState == 4 && this.status == 200) {
+		var results = JSON.parse(this.responseText);
+		DisplayList(results);
+	}
+}
+xmlhttp.open('GET', url, true); //third argument is async = true,  to perform the operation asynchronously (default or absent = true)
+xmlhttp.send();
+
+function DisplayList(obj) {
+	
+	var columnLeft = document.getElementById('columnLeft');
+	var columnRight = document.getElementById('columnRight');
+	
+	var i, j, ul, li, var1, ruleGrp;
+	var ruleDataIdMap = {};
+	ruleIds = new Array();
+
+	for (i = 0; i < obj.data.length; i++) {
+		ruleIds[i] = obj.data[i].id;
+		for (j = 0; j < obj.data[i].relationships.rules.data.length; j++) {
+			ruleDataIdMap[obj.data[i].relationships.rules.data[j].id] = ruleIds[i];
+		}
+	}
+	
+	ruleIds.sort(); // ruleIds(i).reverse() is sorting descending
+	
+	for (i = 0; i < ruleIds.length; i++) {
+		ul = document.createElement('ul');
+		ul.setAttribute('id', ruleIds[i]);
+		li = document.createElement('li');
+		li.innerHTML = '<font size=5><b>' + ruleIds[i] + '</b></font>'; 
+		ul.appendChild(li);
+		
+		if (i < ruleIds.length/2)
+			columnLeft.appendChild(ul);
+		else
+			columnRight.appendChild(ul);
+	}
+	
+	for (i = 0; i < obj.included.length; i++) {
+		ruleGrp = ruleDataIdMap[obj.included[i].id];
+		if (var1 = document.getElementById(ruleGrp)) {
+			var1.innerHTML += "<li><a href='./" + ruleGrp + "/" + obj.included[i].attributes.slug + "'>" + obj.included[i].attributes.title + "</a></li>";
+		}
+	}
+}
+</script>
 
 <hr>
 
