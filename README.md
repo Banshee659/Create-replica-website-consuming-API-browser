@@ -1,1 +1,1 @@
-"Create a replica of Cloud Conformity Knowledge Base Index by consuming the public API" 
+Create a replica of Cloud Conformity Knowledge Base Index by consuming the public API
