@@ -1,99 +1,261 @@
+BODY {
+    font-family: 'Roboto', Helvetica;
+    font-size: 18px;
+    color: #442958
+}
 
-BODY {font-family: 'Roboto', Helvetica; font-size: 18px; color: #442958}
-ol,ul,li {list-style:none; outline:none; padding-top: 4px; padding-bottom: 2px}
+ol,
+ul,
+li {
+    list-style: none;
+    outline: none;
+    padding-top: 4px;
+    padding-bottom: 2px
+}
 
 
 /* common links */
-A:link, A:visited {
-	COLOR: #6B7C94; TEXT-DECORATION: underline;
+
+A:link,
+A:visited {
+    COLOR: #6B7C94;
+    TEXT-DECORATION: underline;
 }
+
 A:hover {
-	COLOR: #6B7C94; TEXT-DECORATION: underline;
+    COLOR: #6B7C94;
+    TEXT-DECORATION: underline;
 }
+
 A:active {
-	COLOR: #6B7C94; TEXT-DECORATION: underline;
+    COLOR: #6B7C94;
+    TEXT-DECORATION: underline;
 }
+
 
 /* links for ruleGroup href */
-.ruleGrplink {font-family: 'calibri'; font-weight: bold; font-size:30px}
-a.ruleGrplink:link, a.ruleGrplink:visited {color:#442958; text-decoration: underline}
-a.ruleGrplink:hover, a.ruleGrplink:active {color:#442958; text-decoration: underline}
+
+.ruleGrplink {
+    font-family: 'calibri';
+    font-weight: bold;
+    font-size: 30px
+}
+
+a.ruleGrplink:link,
+a.ruleGrplink:visited {
+    color: #442958;
+    text-decoration: underline
+}
+
+a.ruleGrplink:hover,
+a.ruleGrplink:active {
+    color: #442958;
+    text-decoration: underline
+}
+
 
 /* links for mainmenu */
-.mainmenu {font-family: 'calibri'; font-size:20px; padding-right:44px;}
-a.mainmenu:link, a.mainmenu:active {color:#226699;  TEXT-DECORATION: none;}
-a.mainmenu:hover, a.mainmenu:visited {color:#442958;  TEXT-DECORATION: none;}
+
+.mainmenu {
+    font-family: 'calibri';
+    font-size: 20px;
+    padding-right: 44px;
+}
+
+a.mainmenu:link,
+a.mainmenu:active {
+    color: #226699;
+    TEXT-DECORATION: none;
+}
+
+a.mainmenu:hover,
+a.mainmenu:visited {
+    color: #442958;
+    TEXT-DECORATION: none;
+}
 
 
 /* links for sign-in */
-.signin {font-family: 'arial'; font-size:14px; padding-left:32px; padding-right:22px}
-a.signin:link, a.signin:active {color:#226699;  TEXT-DECORATION: none;}
-a.signin:hover, a.signin:visited {color:#442958;  TEXT-DECORATION: none;}
+
+.signin {
+    font-family: 'arial';
+    font-size: 14px;
+    padding-left: 32px;
+    padding-right: 22px
+}
+
+a.signin:link,
+a.signin:active {
+    color: #226699;
+    TEXT-DECORATION: none;
+}
+
+a.signin:hover,
+a.signin:visited {
+    color: #442958;
+    TEXT-DECORATION: none;
+}
+
 
 /* links for free trial */
-.freetrial {font-family: 'arial'; font-size:14px; padding: 8px 12px 8px 12px; border-radius: 50px 50px}
-a.freetrial:link, a.freetrial:active {color:white;  TEXT-DECORATION: none; background-color: #D02A67;}
-a.freetrial:hover, a.freetrial:visited {color:white;  TEXT-DECORATION: none; background-color: #442958;}
+
+.freetrial {
+    font-family: 'arial';
+    font-size: 14px;
+    padding: 8px 12px 8px 12px;
+    border-radius: 50px 50px
+}
+
+a.freetrial:link,
+a.freetrial:active {
+    color: white;
+    TEXT-DECORATION: none;
+    background-color: #D02A67;
+}
+
+a.freetrial:hover,
+a.freetrial:visited {
+    color: white;
+    TEXT-DECORATION: none;
+    background-color: #442958;
+}
 
 
 /* these below are for stickey header scrolling */
+
 .header {
-  padding: 10px 16px;
-  background: white;
+    padding: 10px 16px;
+    background: white;
 }
 
 .content {
-  padding: 16px;
+    padding: 16px;
 }
 
 .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  border-bottom: 1px solid #cdd
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid #cdd
 }
 
-.sticky + .content {
-  padding-top: 102px;
+.sticky+.content {
+    padding-top: 102px;
 }
+
+
 /* end of stickey header scrolling */
 
-.title1 {font-family: verdana; font-weight: bold; font-size:36px; padding: 80px 80px 80px 80px}
+.title1 {
+    font-family: verdana;
+    font-weight: bold;
+    font-size: 36px;
+    padding: 80px 80px 80px 80px
+}
 
-.title2 {font-size:18px; padding: 0px 80px 80px 80px}
+.title2 {
+    font-size: 18px;
+    padding: 0px 80px 80px 80px
+}
 
-.decobase {background:#8A5B9A; padding:80px 50px 80px 50px; margin-left:5px}
+.decobase {
+    background: #8A5B9A;
+    padding: 80px 50px 80px 50px;
+    margin-left: 5px
+}
 
-.decoleft {color:white; font-family: arial; font-size:46px; font-weight:bold}
-.decoright {color:#C6ADCF; font-family: Sans-serif; font-size:18px;line-height: 2;}
+.decoleft {
+    color: white;
+    font-family: arial;
+    font-size: 46px;
+    font-weight: bold
+}
+
+.decoright {
+    color: #C6ADCF;
+    font-family: Sans-serif;
+    font-size: 18px;
+    line-height: 2;
+}
 
 
 /* links for home nav */
-.homenav {font-family: 'tahoma'; font-size:14px; padding-right:22px}
-a.homenav:link, a.homenav:active, a.homenav:visited {color:#C6ADCF;  TEXT-DECORATION: underline;}
-a.homenav:hover {color:white;  TEXT-DECORATION: none;}
 
-/* links for nav2 */
-.nav2 {font-family: 'tahoma'; font-size:14px; padding-left:22px}
-a.nav2:link, a.nav2:active, a.nav2:visited, a.nav2:hover {color:white;  TEXT-DECORATION: underline;}
-
-/* bottom back ground */
-.bottom_background { 
-background-image: url('../include/bottom_background.png'); 
-background-repeat: no-repeat;
-text-align:center;
-padding:200px 250px 80px 250px;
-line-height: 2;
-color:#657C93;
-font-size:16px;
+.homenav {
+    font-family: 'tahoma';
+    font-size: 14px;
+    padding-right: 22px
 }
 
+a.homenav:link,
+a.homenav:active,
+a.homenav:visited {
+    color: #C6ADCF;
+    TEXT-DECORATION: underline;
+}
+
+a.homenav:hover {
+    color: white;
+    TEXT-DECORATION: none;
+}
+
+
+/* links for nav2 */
+
+.nav2 {
+    font-family: 'tahoma';
+    font-size: 14px;
+    padding-left: 22px
+}
+
+a.nav2:link,
+a.nav2:active,
+a.nav2:visited,
+a.nav2:hover {
+    color: white;
+    TEXT-DECORATION: underline;
+}
+
+
+/* bottom back ground */
+
+.bottom_background {
+    background-image: url('../include/bottom_background.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 200px 250px 80px 250px;
+    line-height: 2;
+    color: #657C93;
+    font-size: 16px;
+}
+
+
 /* links for free trial - BIG */
-.bigtrial {font-family: 'arial'; font-size:16px; padding: 12px 20px 12px 20px; border-radius: 50px 50px}
-a.bigtrial:link, a.bigtrial:active {color:white;  TEXT-DECORATION: none; background-color: #D02A67;}
-a.bigtrial:hover, a.bigtrial:visited {color:white;  TEXT-DECORATION: none; background-color: #442958;}
+
+.bigtrial {
+    font-family: 'arial';
+    font-size: 16px;
+    padding: 12px 20px 12px 20px;
+    border-radius: 50px 50px
+}
+
+a.bigtrial:link,
+a.bigtrial:active {
+    color: white;
+    TEXT-DECORATION: none;
+    background-color: #D02A67;
+}
+
+a.bigtrial:hover,
+a.bigtrial:visited {
+    color: white;
+    TEXT-DECORATION: none;
+    background-color: #442958;
+}
+
 
 /* flat HR class */
+
 hr.hr_flat {
-  border-top: 1px solid #ccc;
+    border-top: 1px solid #ccc;
 }
