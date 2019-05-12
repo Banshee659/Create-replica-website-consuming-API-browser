@@ -1,0 +1,23 @@
+{
+  "name": "cloudconformity",
+  "version": "1.0.0",
+  "description": "Create a replica of Cloud Conformity Knowledge Base Index by consuming the public API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thang659/Create-replica-website-consuming-API-browser.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thang659/Create-replica-website-consuming-API-browser/issues"
+  },
+  "homepage": "https://github.com/Thang659/Create-replica-website-consuming-API-browser#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-google": "^0.12.0"
+  }
+}
