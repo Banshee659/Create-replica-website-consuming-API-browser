@@ -220,7 +220,7 @@ a.nav2:hover {
 /* bottom back ground */
 
 .bottom_background {
-    background-image: url('../include/bottom_background.png');
+    background-image: url('bottom_background.png');
     background-repeat: no-repeat;
     text-align: center;
     padding: 200px 250px 80px 250px;
