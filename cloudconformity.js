@@ -40,15 +40,17 @@ $(document).ready(function() {
 });
 
 // add sticky header on scroll page down
-window.onscroll = function() { myScroll() };
+document.addEventListener('DOMContentLoaded', function() {
+    window.onscroll = function() { myScroll() };
 
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
 
-function myScroll() {
-    if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-    } else {
-        header.classList.remove("sticky");
+    function myScroll() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
     }
-}
+})
