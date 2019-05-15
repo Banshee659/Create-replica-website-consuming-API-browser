@@ -9,7 +9,7 @@ A replica of Cloud Conformity Knowledge Base Index by consuming the public API
 
 •	Bootstrap, Mocha and Chai are the work in progress.
 
-•	S3 is used as website hosting service: http://teriyakibukake.s3-website-us-east-1.amazonaws.com/
+•	S3 is used as website hosting service: http://covertcanage.s3-website-us-east-1.amazonaws.com/
 
 
 
